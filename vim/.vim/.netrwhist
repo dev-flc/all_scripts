@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/mart/django-extra-views-0.6.5/build/bdist.linux-i686'
+let g:netrw_dirhist_2='/home/mart/django-extra-views-0.6.5/build/lib'
+let g:netrw_dirhist_3='/home/mart/django-extra-views-0.6.5/build/lib/extra_views'
+let g:netrw_dirhist_4='/home/mart/code/python/DjangoProjects/notification_example/notification_example'
+let g:netrw_dirhist_5='/etc'
+let g:netrw_dirhist_6='/home/forever/.moc'
+let g:netrw_dirhist_7='/home/forever/.moc/cache'
+let g:netrw_dirhist_8='/home/forever/.moc'
+let g:netrw_dirhist_9='/home/forever/.vim'
