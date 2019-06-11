@@ -1,7 +1,9 @@
 {
+    "workbench.colorTheme": "Ayu Dark Bordered",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Material Theme Darker High Contrast",
     "window.zoomLevel": 0,
+    "workbench.editor.labelFormat": "short",
+
     "files.exclude": {
         "**/.git": true,
         "**/.DS_Store": true,
@@ -14,50 +16,74 @@
         ".editorconfig": true,
         "debug.log": true, 
     },
+
     "search.exclude": {
         "**/node_modules": true,
         "**/bower_components": true
     },
+
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/.git/subtree-cache/**": true,
         "**/node_modules/*/**": true,
         "**/node_modules": true,
     },
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 17,
-    "editor.formatOnPaste": false,
-    "editor.insertSpaces": false,
-   // "editor.renderWhitespace": "all"
+
+    "editor.fontFamily"    : "'Fira Code'",
+    "editor.fontLigatures" : true,
+    "editor.fontSize"      : 17,
+    "editor.formatOnPaste" : false,
+    "editor.insertSpaces"  : false,
+
+    // "editor.renderWhitespace": "all"
     "todohighlight.keywords": [
         "DEBUG:",
         "REVIEW:",
         {
-            "text": "NOTE:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(39, 174, 96)",
-            "overviewRulerColor": "rgba(39, 174, 96,.2)"
+        "text": "NOTE:",
+        "color": "#fff",
+        "border": "1px",
+        "borderRadius": "1px",
+        "backgroundColor": "rgb(39, 174, 96)",
+        "overviewRulerColor": "rgba(39, 174, 96,.2)"
+        },
+
+        {
+        "text": "ALAN:",
+        "color": "#fff",
+        "border": "1px",
+        "borderRadius": "1px",
+        "backgroundColor": "rgb(155, 89, 182)",
+        "overviewRulerColor": "rgba(155, 89, 182,.2)"
         },
         {
-            "text": "ALAN:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(155, 89, 182)",
-            "overviewRulerColor": "rgba(155, 89, 182,.2)"
+        "text": "ROGELIO:",
+        "color": "#fff",
+        "border": "1px",
+        "borderRadius": "1px",
+        "backgroundColor": "rgb(46, 134, 193)",
+        "overviewRulerColor": "rgba(46, 134, 193,.2)"
         },
+
         {
-            "text": "ROGELIO:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(46, 134, 193)",
-            "overviewRulerColor": "rgba(46, 134, 193,.2)"
-        }
-    ],
+        "text": "JAIR:",
+        "color": "#fff",
+        "border": "1px",
+        "borderRadius": "1px",
+        "backgroundColor": "rgb(142, 68, 173)",
+        "overviewRulerColor": "rgba(142, 68, 173,.2)"
+        },
+
+        {
+        "text": "FRAN:",
+        "color": "#fff",
+        "border": "1px",
+        "borderRadius": "1px",
+        "backgroundColor": "rgb(69, 179, 157)",
+        "overviewRulerColor": "rgba(69, 179, 157,.2)"
+        },
+
+        ],
     "todohighlight.include": [
         "**/*.js",
         "**/*.jsx",
@@ -82,9 +108,14 @@
         "**/.next/**"
     ],
 
-    "todohighlight.maxFilesForSearch": 5120,
+    "todohighlight.maxFilesForSearch"  : 5120,
+    "todohighlight.toggleURI"                : false,
+    "breadcrumbs.enabled"                    : true,
+    "terminal.integrated.rendererType" : "dom",
 
-    "todohighlight.toggleURI": false,
-    "breadcrumbs.enabled": true,
-    "terminal.integrated.rendererType": "dom"
+    "editor.rulers"   : [ 80, 120, 180 ],
+
+    "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#ff4081"
+}
 }
