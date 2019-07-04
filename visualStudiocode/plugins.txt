@@ -1,0 +1,39 @@
+Auto-Open Markdown Preview
+
+Ayu
+
+Babel ES6/ES7
+
+Bracket Pair Colorizer
+
+carbon-now-sh
+
+Color Highlight
+
+DotENV
+
+EditorConfig for VS Code
+
+Git History
+
+Git Project Manager
+
+Import Cost
+
+Material Icon Theme
+
+npm
+
+Path Intellisense
+
+Project Manager
+
+Spanish Language Pack for Visual Studio Code
+
+SVG Viewer
+
+TODO Highlight
+
+Todo Tree
+
+Trailing Spaces

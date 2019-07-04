@@ -1,20 +1,27 @@
 [core]
 
-	editor = vim
+	editor = code
 
 [diff]
 
-	tool = vimdiff
- 
+	tool = code
+
+[diff]
+    tool = vscode
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+
 [user]
 
     name = Fernando Lucena Calixto
     email = fer.lc.developer@gmail.com
- 
+
 [merge]
 
-    tool = vimdiff
- 
+    tool = code
+
 [alias]
 
     logx = log --all --graph --decorate=short --color --format=format:'%C(bold blue)%h%C(reset)+%C(dim red)(%cr)%C(reset)+%C(auto)%d%C(reset)++       \n+++       %C(bold black)%an%C(reset)%C(black): %s%C(reset)'
@@ -27,10 +34,13 @@
          done < <(git logx && echo);"'
 
     st = status
- 
+
     ch = checkout
 
     br = branch
-  
+
     com  = "!f() { git add . && git commit -m \"$@\"; }; f"
 
+    pusv = push origin development-analisis
+
+    pulv = pull origin development-analisis

@@ -2,6 +2,14 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -56,21 +64,21 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+# unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+# # If this is an xterm set the title to user@host:dir
+# case "$TERM" in
+# xterm*|rxvt*)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#     ;;
+# *)
+#     ;;
+# esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -116,20 +124,24 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# export git-aware-prompt colors branch GIT
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
 
-#Export Colors Terminal
+# export git-aware-prompt colors branch GIT
+#export GITAWAREPROMPT=~/.bash/git-aware-prompt
+#source "${GITAWAREPROMPT}/main.sh"
+
 eval $(dircolors -b $HOME/.dircolors)
 
-# Prontent
-export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[38;5;208m\]┌─\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;197m\]<\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;226m\]FernandoLC\[$(tput sgr0)\]\[\033[38;5;197m\]/>\[\033[38;5;208m\](\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;208m\])\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;1m\]\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;208m\]\n└──┤▶\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$"
+#export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[38;5;208m\]┌─\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;197m\]<\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;226m\]FernandoLC\[$(tput sgr0)\]\[\033[38;5;197m\]/>\[\033[38;5;208m\](\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;208m\])\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;1m\]\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;208m\]\n└──┤▶\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$"
 
-# Creacion de alias 
-alias sv="npm run local"
-alias np="cd /home/forevertucode/Documentos/Projects/frontend-new-np"
-alias projects="cd /home/forevertucode/Documentos/Projects"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias sv='npm run dev'
+alias np="cd /home/fernandolc/Documentos/projects/GAE-GNP-NegocioProtegido-Frontend"
+alias vg="cd /home/fernandolc/Documentos/projects/GAE-GNP-VidaGrupo-Front-End"
+alias cb="cd /home/fernandolc/Documentos/projects/conie-bogart"
+alias projects="cd /home/fernandolc/Documentos/projects/"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -137,7 +149,6 @@ alias .....='cd ../../../..'
 alias player='mpsyt'
 alias reload='source ~/.bashrc'
 alias ll='ls -al'
-alias server='npm run dev'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -145,9 +156,6 @@ alias gitconfig='git config --global -e'
 alias ff='/home/fernandolc/prueba.sh'
 alias files='cd /mnt/sdb1'
 alias openfiles='xdg-open /mnt/sdb1'
-alias sonarStart='./Documentos/sonarqube-7.3/bin/linux-x86-64/sonar.sh start'
-alias sonarStop='./Documentos/sonarqube-7.3/bin/linux-x86-64/sonar.sh stop'
 alias sonarAnalysis='np && grunt sonarRunner:analysis'
 
 # killall "node"
-
