@@ -2,14 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-function _update_ps1() {
-    PS1=$(powerline-shell $?)
-}
-
-if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -64,21 +56,21 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# if [ "$color_prompt" = yes ]; then
-#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-# else
-#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-# fi
-# unset color_prompt force_color_prompt
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
 
-# # If this is an xterm set the title to user@host:dir
-# case "$TERM" in
-# xterm*|rxvt*)
-#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-#     ;;
-# *)
-#     ;;
-# esac
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -125,37 +117,105 @@ if ! shopt -oq posix; then
 fi
 
 
-# export git-aware-prompt colors branch GIT
-#export GITAWAREPROMPT=~/.bash/git-aware-prompt
-#source "${GITAWAREPROMPT}/main.sh"
-
 eval $(dircolors -b $HOME/.dircolors)
 
-#export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[38;5;208m\]┌─\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;197m\]<\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;226m\]FernandoLC\[$(tput sgr0)\]\[\033[38;5;197m\]/>\[\033[38;5;208m\](\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;208m\])\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;1m\]\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;208m\]\n└──┤▶\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$"
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#CONFIG PROMTEC
+export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[38;5;208m\]┌─\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;197m\]<\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;226m\]FernandoLC\[$(tput sgr0)\]\[\033[38;5;197m\]/>\[\033[38;5;208m\](\[$(tput sgr0)\]\[\033[38;5;2m\]\w\[$(tput sgr0)\]\[\033[38;5;208m\])\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;1m\]\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;208m\]\n└──┤▶\[$txtblu\]\$batery\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \$"
 
-alias sv='npm run dev'
-alias np="cd /home/fernandolc/Documentos/projects/GAE-GNP-NegocioProtegido-Frontend"
-alias vg="cd /home/fernandolc/Documentos/projects/GAE-GNP-VidaGrupo-Front-End"
-alias cb="cd /home/fernandolc/Documentos/projects/conie-bogart"
-alias projects="cd /home/fernandolc/Documentos/projects/"
+
+#FUNCTIONS
+gitcomit() {
+    if [ "$@" ];
+    then
+        git add . && git commit -m "$*"
+    else
+        echo 'Ingresa una descripción del commit'
+    fi
+}
+
+gitcomitprofile () {
+
+    git_branch=" <<="${branch}"=>>"
+
+
+    if [ "$1" ]; then
+        if [ "$2" ]; then
+            #echo (${#1}+1)
+            echo "${1}_${2}_____${*}"
+            #git add . && git commit -m "$description"
+        else
+            echo 'Upps... La _descripción del commit es requerida'
+        fi
+    else
+        echo 'Upps... El [MODULO] del commit es requerido'
+    fi
+}
+
+gitpush() {
+    if [ "$@" ];
+    then
+        git push origin "$*"
+    else
+        echo 'Ingresa el origin del push'
+    fi
+}
+
+openprojects() {
+    if [ "$@" ]
+    then
+        cd '/home/fernandolc/Documentos/Projects/Gnp/GAE-GNP-Suscribe-Semi-RC-Profesional-Front-End'
+        xdotool key --window windows ctrl+shift+0x0038
+        xdotool key --window windows ctrl+shift+0x0039
+    else
+        echo 'no hay proyecto seleccionado'
+    fi
+}
+
+# Alias
+
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias player='mpsyt'
+
 alias reload='source ~/.bashrc'
+alias editbash='code ~/.bashrc'
+alias editgit='git config --global -e'
+
+alias suspend='systemctl suspend'
+
+alias sv='npm run dev'
+alias sy='yarn run dev'
+
 alias ll='ls -al'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias gitconfig='git config --global -e'
-alias ff='/home/fernandolc/prueba.sh'
-alias files='cd /mnt/sdb1'
-alias openfiles='xdg-open /mnt/sdb1'
-alias sonarAnalysis='np && grunt sonarRunner:analysis'
 
-# killall "node"
+alias projects="cd /home/fernandolc/Documentos/Projects"
+alias aeromexico="cd /home/fernandolc/Documentos/Projects/Aeromexico"
+alias e4="cd /home/fernandolc/Documentos/Projects/Aeromexico/am-e4-ui"
+alias gnp="cd /home/fernandolc/Documentos/Projects/Gnp"
+#alias rcpro="cd /home/fernandolc/Documentos/Projects/Gnp/GAE-GNP-Suscribe-Semi-RC-Profesional-Front-End"
+alias rcpro=openprojects
+
+# PARAMETROS DE ENTRADA DE SONAR
+# { console | start | stop | force-stop | restart | status | dump }
+alias sonar='/home/fernandolc/Documentos/Sonarqube/sonarqube-9.1/bin/linux-x86-64/sonar.sh "$@"'
+alias sonar-scanner='/home/fernandolc/Documentos/Sonarqube/sonar-scanner-4.6/bin/sonar-scanner'
+
+#GIT
+alias com=gitcomit
+#alias comp=gitcomitprofile
+alias push=gitpush
+alias status='git status'
+alias checkout='git checkout'
+
+
+alias build="npm run build"
+alias deploy="gcloud app deploy --version=example"
+
+

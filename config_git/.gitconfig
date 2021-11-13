@@ -1,22 +1,21 @@
+# Este es el archivo de configuración de Git por usuario.
 [core]
 
 	editor = code
 
 [diff]
 
-	tool = code
-
-[diff]
     tool = vscode
 
 [difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
 
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 [user]
 
-    name = Fernando Lucena Calixto
-    email = fer.lc.developer@gmail.com
+	name = FernandoLC
+
+	email = flucenac@aeromexico.com
 
 [merge]
 
@@ -33,14 +32,6 @@
              printf \"%${timelength}s    %s %s %s\n\" \"$time\" \"$hash\" \"$branch\" \"$message\";  \
          done < <(git logx && echo);"'
 
-    st = status
-
-    ch = checkout
-
-    br = branch
-
-    com  = "!f() { git add . && git commit -m \"$@\"; }; f"
-
-    pusv = push origin development-analisis
-
-    pulv = pull origin development-analisis
+#   com  = "!f() { git add . && git commit -m \"$@\"; }; f"
+#   p = "!f() { git push origin \"$@\"; }; f"
+#   c = "!f() { git checkout \"$@\"; }; f"
