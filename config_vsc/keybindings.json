@@ -1,11 +1,17 @@
-// Coloque sus atajos de teclado en este archivo para sobreescribir los valores predeterminados
 [
-	{
-		"key": "ctrl+shift+l",
-		"command": "editor.action.insertSnippet",
-		"when": "editorTextFocus",
-		"args": {
-		  "snippet" : "console.log('%c<==${TM_SELECTED_TEXT}==>', 'color:red;font-size:1rem;font-weight:bold;', ${TM_SELECTED_TEXT}$1 )$2;"
-		}
-	}
+  {
+    "key": "ctrl+shift+l",
+    "command": "multiCommand.consoleLogBasic",
+    "when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "multiCommand.consoleLogTable",
+    "when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "multiCommand.consoleLogColors",
+    "when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact"
+  }
 ]

@@ -1,51 +1,131 @@
 {
-    "workbench.colorTheme": "Ayu Dark Bordered",
-    "workbench.iconTheme": "material-icon-theme",
-    "window.zoomLevel": 0,
-    "workbench.editor.labelFormat": "short",
 
-    "files.exclude": {
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "jspm_packages": true,
-        "**/node_modules": true,
-        "node_modules": true,
-        ".sonar": true,
-        "manifest.json": true,
-        ".gitignore": true,
-        //".editorconfig": true,
-        "debug.log": true,
+  "material-icon-theme.activeIconPack": "react_redux",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.labelFormat": "short",
+  "editor.experimental.stickyScroll.enabled": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "jspm_packages": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    ".sonar": true,
+    "manifest.json": true,
+    ".gitignore": false,
+    ".editorconfig": false,
+    "debug.log": true,
+    "package-lock.json": true,
+    "public": false
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "package-lock.json": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/node_modules": true,
+    "public": true,
+    "package-lock.json": true
+  },
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 17,
+  "editor.formatOnPaste": true,
+  "editor.insertSpaces": false,
+  "breadcrumbs.enabled": true,
+  "editor.rulers": [
+    80,
+    120,
+    180
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorTheme": "One Dark Pro Flat",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.bracketPairColorization.enabled": true,
+  "powermode.enabled": true,
+  "powermode.combo.location": "statusbar",
+  "powermode.combo.counterEnabled": "default",
+  "powermode.combo.timerEnabled": "hide",
+  "powermode.shake.enabled": false,
+  "editor.formatOnSave": true,
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "stylelint.config": {
+    "rules": {
+      "at-rule-name-case": "lower",
+      "at-rule-name-space-after": "always-single-line",
+      "at-rule-semicolon-newline-after": "always"
+    }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.consoleLogBasic",
+      "sequence": [
+        "editor.action.clipboardCopyAction",
+        "editor.action.insertLineAfter",
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.log('${TM_FILENAME} --> ${CLIPBOARD} ==>', ${CLIPBOARD}$1)$2;"
+          }
+        }
+      ]
     },
-
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true
+    {
+      "command": "multiCommand.consoleLogTable",
+      "sequence": [
+        "editor.action.clipboardCopyAction",
+        "editor.action.insertLineAfter",
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.table(${CLIPBOARD}$1)$2;"
+          }
+        }
+      ]
     },
+    {
+      "command": "multiCommand.consoleLogColors",
+      "sequence": [
+        "editor.action.clipboardCopyAction",
+        "editor.action.insertLineAfter",
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.log('%c${TM_FILENAME} --> ${CLIPBOARD} ==>', 'color:#FF8A71;font-size:1rem;font-weight:bold;', ${CLIPBOARD}$1)$2;"
+          }
+        }
+      ]
+    }
+  ],
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "inlineFold.supportedLanguages": [
+    "html",
+    "svelte",
+    "vue",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "rapidapi.terminalLink.enabled": false,
 
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/*/**": true,
-        "**/node_modules": true,
-    },
-
-    "editor.fontFamily"    : "'Fira Code'",
-    "editor.fontLigatures" : true,
-    "editor.fontSize"      : 17,
-    "editor.formatOnPaste" : false,
-    "editor.insertSpaces"  : false,
-
-    // "editor.renderWhitespace": "all"
-    "todo-tree.tags" : ["TODO","FIXME","ALAN","ROGELIO","JAIR", "FRAN", "DAMIAN" ],
-
-    // "todo-tree.defaultHighlight": {
-    //     "icon": "alert",
-    //     "type": "text",
-    //     "foreground": "red",
-    //     "background": "white",
-    //     "opacity": 50,
-    //     "iconColour": "blue"
-    // },
     "todo-tree.customHighlight": {
 
         "TODO": {
@@ -147,39 +227,5 @@
             "overviewRulerColor": "rgba(211, 84, 0,.2)"
         }
 
-        ],
-    "todohighlight.include": [
-        "**/*.js",
-        "**/*.jsx",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.yaml",
-        "**/*.html",
-        "**/*.css",
-        "**/*.scss"
-    ],
-
-    "todohighlight.exclude": [
-        "**/node_modules/**",
-        "**/bower_components/**",
-        "**/dist/**",
-        "**/build/**",
-        "**/.vscode/**",
-        "**/.github/**",
-        "**/_output/**",
-        "**/*.min.*",
-        "**/*.map",
-        "**/.next/**"
-    ],
-
-    "todohighlight.maxFilesForSearch"  : 5120,
-    "todohighlight.toggleURI"                : false,
-    "breadcrumbs.enabled"                    : true,
-    "terminal.integrated.rendererType" : "dom",
-
-    "editor.rulers"   : [ 80, 120, 180 ],
-
-    "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#ff4081"
-}
+        ]
 }
