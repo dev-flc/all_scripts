@@ -87,8 +87,10 @@
     "editorGroupHeader.border"         : "#797979",
 
     "tab.inactiveBackground" : "#1F262E",
-    "tab.activeBackground"   : "#1F262E",
-    "tab.border"             : "#797979",
+    "tab.activeBackground"   : "#434D5B",
+    "tab.activeBorder"       : "#797979",
+    "tab.activeForeground"   : "#c0cada",
+    "tab.hoverBackground"    : "#303740",
 
     "commandCenter.inactiveBackground" : "#1F262E",
     "commandCenter.inactiveForeground" : "#c0cada",
@@ -119,12 +121,11 @@
 
     "editorLineNumber.activeForeground" : "#c0cada",
     "editorGroup.border"                : "#797979",
-    "editorRuler.foreground"            : "#ff6188",
+    "editorRuler.foreground"            : "#c0cada",
 
     "button.background"                 : "#434D5B",
     "button.hoverBackground"            : "#303740",
 
-    "tab.activeBorder"                  : "#797979",
     "focusBorder"                       : "#484a4e",
     "icon.foreground"                   : "#484a4e",
 
