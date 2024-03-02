@@ -1,43 +1,42 @@
 {
   "files.eol": "\n",
-  "editor.fontFamily": "Fira Code",
-  "editor.fontLigatures": true,
+  "window.zoomLevel": 1.5,
   "editor.fontSize": 17,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.rulers": [80, 120, 180],
   "editor.formatOnPaste": true,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "expand",
+  "editor.guides.bracketPairs": true,
+  "files.autoSave":"afterDelay",
+  "workbench.iconTheme": "material-icon-theme",
   "editor.insertSpaces": false,
   "breadcrumbs.enabled": false,
-  "editor.rulers": [80, 120, 180],
-  "security.workspace.trust.untrustedFiles": "open",
-  "workbench.colorTheme": "One Dark Pro Flat",
-  "editor.bracketPairColorization.enabled": true,
-  "material-icon-theme.activeIconPack": "react_redux",
-  "workbench.editor.labelFormat": "short",
-  "editor.minimap.renderCharacters": false,
-  "editor.cursorBlinking": "expand",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "terminal.integrated.env.linux": {},
-  "terminal.integrated.env.windows": {},
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "console-ninja.showWhatsNew": false,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "cSpell.language": "en,es",
-  "material-icon-theme.folders.theme": "specific",
-  "workbench.iconTheme": "material-icon-theme",
-  "console-ninja.featureSet": "Community",
+  "explorer.confirmDelete": false,
   "editor.linkedEditing": true,
   "editor.stickyScroll.enabled": true,
-  "explorer.confirmDelete": false,
+  "terminal.integrated.fontFamily": "'Fira Code'",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.guides.highlightActiveBracketPair": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.bracketPairColorization.enabled": true,
+  "material-icon-theme.activeIconPack": "react_redux",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.guides.bracketPairs": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.editor.labelFormat": "short",
+  "editor.minimap.renderCharacters": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "material-icon-theme.folders.theme": "specific",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 
-  "terminal.integrated.commandsToSkipShell": [
+  "terminal.integrated.commandsToSkipShell" : [
     "psl.stepIn",
     "psl.stepOut",
     "psl.stepOver",
     "psl.sendToHostTerminal"
   ],
 
-  "editor.language.colorizedBracketPairs": [
+  "editor.language.colorizedBracketPairs" : [
     ["[", "]"],
     ["(", ")"],
     ["{", "}"],
@@ -46,12 +45,12 @@
     ["case", "esac"]
   ],
 
-  "[python]": {
-    "editor.language.colorizedBracketPairs": [[":"]],
-    "editor.formatOnType": true
+  "[python]" : {
+    "editor.language.colorizedBracketPairs" : [[":"]],
+    "editor.formatOnType"                   : true
   },
 
-  "[shellscript]": {
+  "[shellscript]" : {
     "editor.language.colorizedBracketPairs": [
       ["[", "]"],
       ["{", "}"],
@@ -63,126 +62,165 @@
   },
 
   "workbench.colorCustomizations": {
-    "editorBracketHighlight.foreground1": "#fc9867",
-    "editorBracketHighlight.foreground2": "#ff6188",
-    "editorBracketHighlight.foreground3": "#ffd866",
-    "editorBracketHighlight.foreground4": "#a9dc76",
-    "editorBracketHighlight.foreground5": "#78dce8",
-    "editorBracketHighlight.foreground6": "#ff6188",
+    "editorBracketHighlight.foreground1" : "#fc9867",
+    "editorBracketHighlight.foreground2" : "#ff6188",
+    "editorBracketHighlight.foreground3" : "#ffd866",
+    "editorBracketHighlight.foreground4" : "#a9dc76",
+    "editorBracketHighlight.foreground5" : "#78dce8",
+    "editorBracketHighlight.foreground6" : "#ff6188",
 
-    "editorBracketPairGuide.background1": "#fc9867",
-    "editorBracketPairGuide.background2": "#ff6188",
-    "editorBracketPairGuide.background3": "#ffd866",
-    "editorBracketPairGuide.background4": "#a9dc76",
-    "editorBracketPairGuide.background5": "#78dce8",
-    "editorBracketPairGuide.background6": "#ff6188",
+    "editorBracketPairGuide.background1" : "#fc9867",
+    "editorBracketPairGuide.background2" : "#ff6188",
+    "editorBracketPairGuide.background3" : "#ffd866",
+    "editorBracketPairGuide.background4" : "#a9dc76",
+    "editorBracketPairGuide.background5" : "#78dce8",
+    "editorBracketPairGuide.background6" : "#ff6188",
 
-    "editorBracketPairGuide.activeBackground1": "#fc9867",
-    "editorBracketPairGuide.activeBackground2": "#ff6188",
-    "editorBracketPairGuide.activeBackground3": "#ffd866",
-    "editorBracketPairGuide.activeBackground4": "#a9dc76",
-    "editorBracketPairGuide.activeBackground5": "#78dce8",
-    "editorBracketPairGuide.activeBackground6": "#ff6188",
+    "editorBracketPairGuide.activeBackground1" : "#fc9867",
+    "editorBracketPairGuide.activeBackground2" : "#ff6188",
+    "editorBracketPairGuide.activeBackground3" : "#ffd866",
+    "editorBracketPairGuide.activeBackground4" : "#a9dc76",
+    "editorBracketPairGuide.activeBackground5" : "#78dce8",
+    "editorBracketPairGuide.activeBackground6" : "#ff6188",
+
+    "editorGroupHeader.tabsBackground" : "#1F262E",
+    "editorGroupHeader.border"         : "#797979",
+
+    "tab.inactiveBackground" : "#1F262E",
+    "tab.activeBackground"   : "#1F262E",
+    "tab.border"             : "#797979",
+
+    "commandCenter.inactiveBackground" : "#1F262E",
+    "commandCenter.inactiveForeground" : "#c0cada",
+    "commandCenter.activeBackground"   : "#1F262E",
+    "commandCenter.activeForeground"   : "#c0cada",
+    "commandCenter.border"             : "#797979",
+
+    "menu.foreground" : "#c0cada",
+    "menu.background" : "#1F262E",
+    "menu.border"     : "#797979",
+
+    "titleBar.inactiveBackground" : "#1F262E",
+    "titleBar.inactiveForeground" : "#c0cada",
+    "titleBar.activeBackground"   : "#1F262E",
+    "titleBar.activeForeground"   : "#c0cada",
+    "titleBar.border"             : "#797979",
+
+    "panel.background" : "#1F262E",
+    "panel.border"     : "#797979",
+
+    "editorWidget.background" : "#1F262E",
+    "editorWidget.foreground" : "#c0cada",
+    "editorWidget.border"     : "#797979",
 
     "editor.background"                 : "#1F262E",
+    "editor.foreground"                 : "#c0cada",
     "editor.border"                     : "#ff6188",
+
+    "editorLineNumber.activeForeground" : "#c0cada",
+    "editorGroup.border"                : "#797979",
+    "editorRuler.foreground"            : "#ff6188",
+
     "button.background"                 : "#434D5B",
     "button.hoverBackground"            : "#303740",
-    "editorRuler.foreground"            : "#ff6188",
-    "tab.activeBorder"                  : "#ff6188",
+
+    "tab.activeBorder"                  : "#797979",
     "focusBorder"                       : "#484a4e",
     "icon.foreground"                   : "#484a4e",
+
     "activityBar.foreground"            : "#c0cada",
     "activityBar.background"            : "#1F262E",
     "activityBar.border"                : "#797979",
+
     "sideBar.foreground"                : "#c0cada",
     "sideBar.background"                : "#1F262E",
     "sideBar.border"                    : "#797979",
+
     "foreground"                        : "#c0cada",
     "statusBar.background"              : "#1F262E",
     "terminal.background"               : "#1F262E",
+
     "badge.background"                  : "#484a4e",
     "badge.foreground"                  : "#c0cada",
-    "sideBarSectionHeader.background"   :"#303740",
-    "editorLineNumber.activeForeground" : "#78dce8",
-    "editorGroup.border"                : "#797979",
+
+    "sideBarSectionHeader.background"   : "#303740",
   },
 
   "files.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "node_modules": true,
-    ".sonar": true,
-    "manifest.json": true,
-    ".gitignore": true,
-    ".editorconfig": true,
-    "debug.log": true,
-    "package-lock.json": true,
-    "public": true,
+    "**/.git"           : true,
+    "**/node_modules"   : true,
+    "node_modules"      : true,
+    ".sonar"            : true,
+    "manifest.json"     : true,
+    ".gitignore"        : true,
+    ".editorconfig"     : true,
+    "debug.log"         : true,
+    "package-lock.json" : true,
+    "public"            : true,
   },
 
   "search.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "node_modules": true,
-    ".sonar": true,
-    "manifest.json": true,
-    ".gitignore": true,
-    ".editorconfig": true,
-    "debug.log": true,
-    "package-lock.json": true,
-    "public": true,
+    "**/.git"           : true,
+    "**/node_modules"   : true,
+    "node_modules"      : true,
+    ".sonar"            : true,
+    "manifest.json"     : true,
+    ".gitignore"        : true,
+    ".editorconfig"     : true,
+    "debug.log"         : true,
+    "package-lock.json" : true,
+    "public"            : true,
   },
 
   "files.watcherExclude": {
-     "**/.git": true,
-    "**/node_modules": true,
-    "node_modules": true,
-    ".sonar": true,
-    "manifest.json": true,
-    ".gitignore": true,
-    ".editorconfig": true,
-    "debug.log": true,
-    "package-lock.json": true,
-    "public": true,
+    "**/.git"           : true,
+    "**/node_modules"   : true,
+    "node_modules"      : true,
+    ".sonar"            : true,
+    "manifest.json"     : true,
+    ".gitignore"        : true,
+    ".editorconfig"     : true,
+    "debug.log"         : true,
+    "package-lock.json" : true,
+    "public"            : true,
   },
 
   "multiCommand.commands": [
     {
-      "command": "multiCommand.consoleLogBasic",
-      "sequence": [
+      "command"  : "multiCommand.consoleLogBasic",
+      "sequence" : [
         "editor.action.clipboardCopyAction",
         "editor.action.insertLineAfter",
         {
-          "command": "editor.action.insertSnippet",
-          "args": {
-            "snippet": "console.log('${CLIPBOARD}==>', ${CLIPBOARD}$1)$2;"
+          "command" : "editor.action.insertSnippet",
+          "args"    : {
+            "snippet" : "console.log('${CLIPBOARD}==>', ${CLIPBOARD}$1)$2;"
           }
         }
       ]
     },
     {
-      "command": "multiCommand.consoleLogTable",
-      "sequence": [
+      "command"  : "multiCommand.consoleLogTable",
+      "sequence" : [
         "editor.action.clipboardCopyAction",
         "editor.action.insertLineAfter",
         {
-          "command": "editor.action.insertSnippet",
-          "args": {
-            "snippet": "console.table(${CLIPBOARD}$1)$2;"
+          "command" : "editor.action.insertSnippet",
+          "args"    : {
+            "snippet" : "console.table(${CLIPBOARD}$1)$2;"
           }
         }
       ]
     },
     {
-      "command": "multiCommand.consoleLogColors",
-      "sequence": [
+      "command"  : "multiCommand.consoleLogColors",
+      "sequence" : [
         "editor.action.clipboardCopyAction",
         "editor.action.insertLineAfter",
         {
-          "command": "editor.action.insertSnippet",
-          "args": {
-            "snippet": "console.log('%c${CLIPBOARD}==>', 'color:#ff6188;font-size:1rem;font-weight:bold;', ${CLIPBOARD}$1)$2;"
+          "command" : "editor.action.insertSnippet",
+          "args"    : {
+            "snippet" : "console.log('%c${CLIPBOARD}==>', 'color:#ff6188;font-size:1rem;font-weight:bold;', ${CLIPBOARD}$1)$2;"
           }
         }
       ]
