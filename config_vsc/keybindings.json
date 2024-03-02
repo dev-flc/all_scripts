@@ -1,17 +1,19 @@
 [
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+shift+j",
     "command": "multiCommand.consoleLogBasic",
-    "when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact"
+    "when": "editorTextFocus"
+    //"when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact || editorLangId == typescript"
   },
   {
     "key": "ctrl+shift+t",
     "command": "multiCommand.consoleLogTable",
-    "when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact"
+    "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+shift+l",
     "command": "multiCommand.consoleLogColors",
-    "when": "editorTextFocus && editorLangId == javascript || editorLangId == javascriptreact"
+    "when": "editorTextFocus"
   }
 ]
+

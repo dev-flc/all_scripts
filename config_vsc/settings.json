@@ -1,76 +1,150 @@
 {
-
-  "material-icon-theme.activeIconPack": "react_redux",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.labelFormat": "short",
-  "editor.experimental.stickyScroll.enabled": true,
-  "files.exclude": {
-    "**/.git": true,
-    "**/.DS_Store": true,
-    "jspm_packages": true,
-    "**/node_modules": true,
-    "node_modules": true,
-    ".sonar": true,
-    "manifest.json": true,
-    ".gitignore": false,
-    ".editorconfig": false,
-    "debug.log": true,
-    "package-lock.json": true,
-    "public": false
-  },
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/bower_components": true,
-    "package-lock.json": true
-  },
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/*/**": true,
-    "**/node_modules": true,
-    "public": true,
-    "package-lock.json": true
-  },
-  "editor.fontFamily": "'Fira Code'",
+  "files.eol": "\n",
+  "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 17,
   "editor.formatOnPaste": true,
   "editor.insertSpaces": false,
-  "breadcrumbs.enabled": true,
-  "editor.rulers": [
-    80,
-    120,
-    180
-  ],
+  "breadcrumbs.enabled": false,
+  "editor.rulers": [80, 120, 180],
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorTheme": "One Dark Pro Flat",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "editor.bracketPairColorization.enabled": true,
-  "powermode.enabled": true,
-  "powermode.combo.location": "statusbar",
-  "powermode.combo.counterEnabled": "default",
-  "powermode.combo.timerEnabled": "hide",
-  "powermode.shake.enabled": false,
-  "editor.formatOnSave": true,
+  "material-icon-theme.activeIconPack": "react_redux",
+  "workbench.editor.labelFormat": "short",
+  "editor.minimap.renderCharacters": false,
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.env.linux": {},
+  "terminal.integrated.env.windows": {},
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "console-ninja.showWhatsNew": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "cSpell.language": "en,es",
+  "material-icon-theme.folders.theme": "specific",
+  "workbench.iconTheme": "material-icon-theme",
+  "console-ninja.featureSet": "Community",
+  "editor.linkedEditing": true,
+  "editor.stickyScroll.enabled": true,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.guides.bracketPairs": true,
 
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "terminal.integrated.commandsToSkipShell": [
+    "psl.stepIn",
+    "psl.stepOut",
+    "psl.stepOver",
+    "psl.sendToHostTerminal"
+  ],
+
+  "editor.language.colorizedBracketPairs": [
+    ["[", "]"],
+    ["(", ")"],
+    ["{", "}"],
+    ["do", "done"],
+    ["if", "elif", "else", "fi"],
+    ["case", "esac"]
+  ],
+
+  "[python]": {
+    "editor.language.colorizedBracketPairs": [[":"]],
+    "editor.formatOnType": true
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  "[shellscript]": {
+    "editor.language.colorizedBracketPairs": [
+      ["[", "]"],
+      ["{", "}"],
+      ["(", ")"],
+      ["do", "done"],
+      ["if", "elif", "else", "fi"],
+      ["case", "esac"]
+    ]
   },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#fc9867",
+    "editorBracketHighlight.foreground2": "#ff6188",
+    "editorBracketHighlight.foreground3": "#ffd866",
+    "editorBracketHighlight.foreground4": "#a9dc76",
+    "editorBracketHighlight.foreground5": "#78dce8",
+    "editorBracketHighlight.foreground6": "#ff6188",
+
+    "editorBracketPairGuide.background1": "#fc9867",
+    "editorBracketPairGuide.background2": "#ff6188",
+    "editorBracketPairGuide.background3": "#ffd866",
+    "editorBracketPairGuide.background4": "#a9dc76",
+    "editorBracketPairGuide.background5": "#78dce8",
+    "editorBracketPairGuide.background6": "#ff6188",
+
+    "editorBracketPairGuide.activeBackground1": "#fc9867",
+    "editorBracketPairGuide.activeBackground2": "#ff6188",
+    "editorBracketPairGuide.activeBackground3": "#ffd866",
+    "editorBracketPairGuide.activeBackground4": "#a9dc76",
+    "editorBracketPairGuide.activeBackground5": "#78dce8",
+    "editorBracketPairGuide.activeBackground6": "#ff6188",
+
+    "editor.background"                 : "#1F262E",
+    "editor.border"                     : "#ff6188",
+    "button.background"                 : "#434D5B",
+    "button.hoverBackground"            : "#303740",
+    "editorRuler.foreground"            : "#ff6188",
+    "tab.activeBorder"                  : "#ff6188",
+    "focusBorder"                       : "#484a4e",
+    "icon.foreground"                   : "#484a4e",
+    "activityBar.foreground"            : "#c0cada",
+    "activityBar.background"            : "#1F262E",
+    "activityBar.border"                : "#797979",
+    "sideBar.foreground"                : "#c0cada",
+    "sideBar.background"                : "#1F262E",
+    "sideBar.border"                    : "#797979",
+    "foreground"                        : "#c0cada",
+    "statusBar.background"              : "#1F262E",
+    "terminal.background"               : "#1F262E",
+    "badge.background"                  : "#484a4e",
+    "badge.foreground"                  : "#c0cada",
+    "sideBarSectionHeader.background"   :"#303740",
+    "editorLineNumber.activeForeground" : "#78dce8",
+    "editorGroup.border"                : "#797979",
   },
-  "stylelint.config": {
-    "rules": {
-      "at-rule-name-case": "lower",
-      "at-rule-name-space-after": "always-single-line",
-      "at-rule-semicolon-newline-after": "always"
-    }
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    ".sonar": true,
+    "manifest.json": true,
+    ".gitignore": true,
+    ".editorconfig": true,
+    "debug.log": true,
+    "package-lock.json": true,
+    "public": true,
   },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.stylelint": true
+
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    ".sonar": true,
+    "manifest.json": true,
+    ".gitignore": true,
+    ".editorconfig": true,
+    "debug.log": true,
+    "package-lock.json": true,
+    "public": true,
+  },
+
+  "files.watcherExclude": {
+     "**/.git": true,
+    "**/node_modules": true,
+    "node_modules": true,
+    ".sonar": true,
+    "manifest.json": true,
+    ".gitignore": true,
+    ".editorconfig": true,
+    "debug.log": true,
+    "package-lock.json": true,
+    "public": true,
   },
 
   "multiCommand.commands": [
@@ -82,7 +156,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log('${TM_FILENAME} --> ${CLIPBOARD} ==>', ${CLIPBOARD}$1)$2;"
+            "snippet": "console.log('${CLIPBOARD}==>', ${CLIPBOARD}$1)$2;"
           }
         }
       ]
@@ -108,124 +182,10 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log('%c${TM_FILENAME} --> ${CLIPBOARD} ==>', 'color:#FF8A71;font-size:1rem;font-weight:bold;', ${CLIPBOARD}$1)$2;"
+            "snippet": "console.log('%c${CLIPBOARD}==>', 'color:#ff6188;font-size:1rem;font-weight:bold;', ${CLIPBOARD}$1)$2;"
           }
         }
       ]
     }
-  ],
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "inlineFold.supportedLanguages": [
-    "html",
-    "svelte",
-    "vue",
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact"
-  ],
-  "rapidapi.terminalLink.enabled": false,
-
-    "todo-tree.customHighlight": {
-
-        "TODO": {
-            "icon": "check",
-            "type": "line"
-        },
-
-        "FIXME": {
-            "icon"      : "flame",
-            "foreground": "#FFF",
-            "iconColour": "#ff4081"
-        },
-
-        "ALAN": {
-            "icon"      : "flame",
-            "foreground": "#FFF",
-            "iconColour": "#9b59b6"
-        },
-
-        "ROGELIO": {
-            "icon"      : "flame",
-            "foreground": "#FFF",
-            "iconColour": "#2e86c1"
-        },
-
-        "JAIR": {
-            "icon"      : "flame",
-            "foreground": "#FFF",
-            "iconColour": "#34495E"
-        },
-
-        "FRAN": {
-            "icon"      : "flame",
-            "foreground": "#FFF",
-            "iconColour": "#000000"
-        },
-
-        "DAMIAN": {
-            "icon"      : "flame",
-            "foreground": "#FFF",
-            "iconColour": "#D35400"
-        },
-    },
-
-    "todohighlight.keywords": [
-        "DEBUG:",
-        "REVIEW:",
-        {
-            "text": "NOTE:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(39, 174, 96)",
-            "overviewRulerColor": "rgba(39, 174, 96,.2)"
-        },
-
-        {
-            "text": "ALAN:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(155, 89, 182)",
-            "overviewRulerColor": "rgba(155, 89, 182,.2)"
-        },
-
-        {
-            "text": "ROGELIO:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(46, 134, 193)",
-            "overviewRulerColor": "rgba(46, 134, 193,.2)"
-        },
-
-        {
-            "text": "JAIR:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(52, 73, 94)",
-            "overviewRulerColor": "rgba(52, 73, 94,.2)"
-        },
-
-        {
-            "text": "FRAN:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(000, 000, 000)",
-            "overviewRulerColor": "rgba(000, 000, 000,.2)"
-        },
-
-        {
-            "text": "DAMIAN:",
-            "color": "#fff",
-            "border": "1px",
-            "borderRadius": "1px",
-            "backgroundColor": "rgb(211, 84, 0)",
-            "overviewRulerColor": "rgba(211, 84, 0,.2)"
-        }
-
-        ]
+  ]
 }
